@@ -7,7 +7,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSnipVersion;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemSpotify;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemItunes;
+        //private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemItunes;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemWinamp;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemFoobar2000;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemVlc;
@@ -69,7 +69,7 @@
             this.toolStripMenuItemSnipVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemSpotify = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemItunes = new System.Windows.Forms.ToolStripMenuItem();
+            //this.toolStripMenuItemItunes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemWinamp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFoobar2000 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemVlc = new System.Windows.Forms.ToolStripMenuItem();
@@ -107,7 +107,7 @@
             this.toolStripMenuItemSnipVersion,
             this.toolStripSeparator,
             this.toolStripMenuItemSpotify,
-            this.toolStripMenuItemItunes,
+            //this.toolStripMenuItemItunes,
             this.toolStripMenuItemWinamp,
             this.toolStripMenuItemFoobar2000,
             this.toolStripMenuItemVlc,
@@ -147,10 +147,12 @@
             // 
             // toolStripMenuItemItunes
             // 
+            /*
             this.toolStripMenuItemItunes.Name = "toolStripMenuItemItunes";
             this.toolStripMenuItemItunes.Size = new System.Drawing.Size(67, 22);
             this.toolStripMenuItemItunes.Text = Globals.ResourceManager.GetString("iTunes");
             this.toolStripMenuItemItunes.Click += new System.EventHandler(this.PlayerSelectionCheck);
+            */
             // 
             // toolStripMenuItemWinamp
             // 

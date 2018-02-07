@@ -142,6 +142,13 @@ namespace Winter
                 output = output.Replace(Globals.ArtistVariableLowercase, artist.ToLower(CultureInfo.CurrentCulture));
                 output = output.Replace(Globals.ArtistVariable, artist);
             }
+            else
+            {
+                output = output.Replace(Globals.ArtistVariableUppercase, "");
+                output = output.Replace(Globals.ArtistVariableLowercase, "");
+                output = output.Replace(Globals.ArtistVariable, "");
+                output = output.Replace(Globals.SeparatorFormat, "");
+            }
 
             output = output.Replace(Globals.NewLineVariable, "\r\n");
             output = output.Replace(Globals.TrackIdVariable, trackId);

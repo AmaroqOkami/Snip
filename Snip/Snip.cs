@@ -137,10 +137,11 @@ namespace Winter
                 case Globals.MediaPlayerSelection.Spotify:
                     this.ToggleSpotify();
                     break;
-
+                /*
                 case Globals.MediaPlayerSelection.iTunes:
                     this.ToggleiTunes();
                     break;
+                */
 
                 case Globals.MediaPlayerSelection.Winamp:
                     this.ToggleWinamp();
@@ -224,10 +225,12 @@ namespace Winter
             {
                 this.ToggleSpotify();
             }
+            /*
             else if (sender == this.toolStripMenuItemItunes)
             {
                 this.ToggleiTunes();
             }
+            */
             else if (sender == this.toolStripMenuItemWinamp)
             {
                 this.ToggleWinamp();
@@ -253,7 +256,7 @@ namespace Winter
         private void ToggleSpotify()
         {
             this.toolStripMenuItemSpotify.Checked = true;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = false;
             this.toolStripMenuItemFoobar2000.Checked = false;
             this.toolStripMenuItemVlc.Checked = false;
@@ -272,6 +275,7 @@ namespace Winter
                     Globals.ResourceManager.GetString("Spotify")));
         }
 
+        /*
         private void ToggleiTunes()
         {
             this.toolStripMenuItemSpotify.Checked = false;
@@ -293,11 +297,12 @@ namespace Winter
                     Globals.ResourceManager.GetString("SwitchedToPlayer"),
                     Globals.ResourceManager.GetString("iTunes")));
         }
+        */
 
         private void ToggleWinamp()
         {
             this.toolStripMenuItemSpotify.Checked = false;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = true;
             this.toolStripMenuItemFoobar2000.Checked = false;
             this.toolStripMenuItemVlc.Checked = false;
@@ -319,7 +324,7 @@ namespace Winter
         private void Togglefoobar2000()
         {
             this.toolStripMenuItemSpotify.Checked = false;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = false;
             this.toolStripMenuItemFoobar2000.Checked = true;
             this.toolStripMenuItemVlc.Checked = false;
@@ -341,7 +346,7 @@ namespace Winter
         private void ToggleVLC()
         {
             this.toolStripMenuItemSpotify.Checked = false;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = false;
             this.toolStripMenuItemFoobar2000.Checked = false;
             this.toolStripMenuItemVlc.Checked = true;
@@ -363,7 +368,7 @@ namespace Winter
         private void ToggleGPMDP()
         {
             this.toolStripMenuItemSpotify.Checked = false;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = false;
             this.toolStripMenuItemFoobar2000.Checked = false;
             this.toolStripMenuItemVlc.Checked = false;
@@ -385,7 +390,7 @@ namespace Winter
         private void ToggleQuodLibet()
         {
             this.toolStripMenuItemSpotify.Checked = false;
-            this.toolStripMenuItemItunes.Checked = false;
+            //this.toolStripMenuItemItunes.Checked = false;
             this.toolStripMenuItemWinamp.Checked = false;
             this.toolStripMenuItemFoobar2000.Checked = false;
             this.toolStripMenuItemVlc.Checked = false;

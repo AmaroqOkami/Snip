@@ -110,7 +110,6 @@
     <Compile Include="Players\foobar2000.cs" />
     <Compile Include="Players\GPMDP.cs" />
     <Compile Include="Players\Spotify.cs" />
-    <Compile Include="Players\iTunes.cs" />
     <Compile Include="Players\VLC.cs" />
     <Compile Include="Players\Winamp.cs" />
     <Compile Include="Players\QuodLibet.cs" />
@@ -147,17 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Snip.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="iTunesLib">
-      <Guid>{9E93C96F-CF0D-43F6-8BA8-B807A3370712}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>13</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -199,7 +187,6 @@
     <Content Include="Resources\Strings.de-CH.txt" />
     <Content Include="Resources\Strings.de-DE.txt" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"$(ProjectDir)ResgenAllTheThings.cmd" "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
