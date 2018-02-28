@@ -188,6 +188,7 @@ namespace Winter
             this.toolStripMenuItemDisplayTrackPopup.Checked = Globals.DisplayTrackPopup;
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Checked = Globals.EmptyFileIfNoTrackPlaying;
             this.toolStripMenuItemEnableHotkeys.Checked = Globals.EnableHotkeys;
+            this.toolStripMenuItemStartWithWindows.Checked = Globals.StartWithWindows;
         }
 
         private void ToggleHotkeys()
@@ -620,6 +621,30 @@ namespace Winter
             }
 
             Globals.EnableHotkeys = this.toolStripMenuItemEnableHotkeys.Checked;
+        }
+
+        private void ToolStripMenuItemStartWithWindows_Click(object sender, EventArgs e)
+        {
+            string shortcutPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SnipBoot.lnk";
+
+            if (this.toolStripMenuItemStartWithWindows.Checked)
+            {
+                this.toolStripMenuItemStartWithWindows.Checked = false;
+                if (System.IO.File.Exists(shortcutPath))
+                {
+                    System.IO.File.Delete(shortcutPath);
+                }
+            }
+            else
+            {
+                this.toolStripMenuItemStartWithWindows.Checked = true;
+                if (!System.IO.File.Exists(shortcutPath))
+                {
+                    Settings.CreateStartupShortcut();
+                }
+            }
+
+            Globals.StartWithWindows = this.toolStripMenuItemStartWithWindows.Checked;
         }
 
         private void ToolStripMenuItemSnipVersion_Click(object sender, EventArgs e)

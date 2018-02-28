@@ -61,6 +61,7 @@ namespace Winter
         public static bool DisplayTrackPopup { get; set; }
         public static bool EmptyFileIfNoTrackPlaying { get; set; }
         public static bool EnableHotkeys { get; set; }
+        public static bool StartWithWindows { get; set; }
 
         public static string DefaultTrackFormat { get; set; }
         public static string DefaultSeparatorFormat { get; set; }

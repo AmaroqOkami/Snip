@@ -69,7 +69,6 @@
             this.toolStripMenuItemSnipVersion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemSpotify = new System.Windows.Forms.ToolStripMenuItem();
-            //this.toolStripMenuItemItunes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemWinamp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemFoobar2000 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemVlc = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,15 +89,17 @@
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemEnableHotkeys = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemStartWithWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.timerScanMediaPlayer = new System.Windows.Forms.Timer(this.components);
+           
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
             // 
             this.notifyIcon.ContextMenuStrip = this.contextMenuStrip;
-            this.notifyIcon.Text = Globals.ResourceManager.GetString("NoTrackPlaying");
             this.notifyIcon.Visible = true;
             // 
             // contextMenuStrip
@@ -107,7 +108,6 @@
             this.toolStripMenuItemSnipVersion,
             this.toolStripSeparator,
             this.toolStripMenuItemSpotify,
-            //this.toolStripMenuItemItunes,
             this.toolStripMenuItemWinamp,
             this.toolStripMenuItemFoobar2000,
             this.toolStripMenuItemVlc,
@@ -125,98 +125,96 @@
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying,
             this.toolStripMenuItemEnableHotkeys,
             this.toolStripSeparator3,
+            this.toolStripMenuItemStartWithWindows,
+            this.toolStripSeparator4,
             this.toolStripMenuItemExit});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(68, 220);
+            this.contextMenuStrip.Size = new System.Drawing.Size(177, 452);
             // 
             // toolStripMenuItemSnipVersion
             // 
             this.toolStripMenuItemSnipVersion.Enabled = false;
             this.toolStripMenuItemSnipVersion.Name = "toolStripMenuItemSnipVersion";
-            this.toolStripMenuItemSnipVersion.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSnipVersion.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSnipVersion.Text = Globals.ResourceManager.GetString("SnipForm") + AssemblyInformation.AssemblyShorterVersion;
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(167, 6);
             // 
             // toolStripMenuItemSpotify
             // 
             this.toolStripMenuItemSpotify.Checked = true;
             this.toolStripMenuItemSpotify.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemSpotify.Name = "toolStripMenuItemSpotify";
-            this.toolStripMenuItemSpotify.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSpotify.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSpotify.Text = Globals.ResourceManager.GetString("Spotify");
             this.toolStripMenuItemSpotify.Click += new System.EventHandler(this.PlayerSelectionCheck);
-            // 
-            // toolStripMenuItemItunes
-            // 
-            /*
-            this.toolStripMenuItemItunes.Name = "toolStripMenuItemItunes";
-            this.toolStripMenuItemItunes.Size = new System.Drawing.Size(67, 22);
-            this.toolStripMenuItemItunes.Text = Globals.ResourceManager.GetString("iTunes");
-            this.toolStripMenuItemItunes.Click += new System.EventHandler(this.PlayerSelectionCheck);
-            */
             // 
             // toolStripMenuItemWinamp
             // 
             this.toolStripMenuItemWinamp.Name = "toolStripMenuItemWinamp";
-            this.toolStripMenuItemWinamp.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemWinamp.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemWinamp.Text = Globals.ResourceManager.GetString("Winamp");
             this.toolStripMenuItemWinamp.Click += new System.EventHandler(this.PlayerSelectionCheck);
             // 
             // toolStripMenuItemFoobar2000
             // 
             this.toolStripMenuItemFoobar2000.Name = "toolStripMenuItemFoobar2000";
-            this.toolStripMenuItemFoobar2000.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemFoobar2000.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemFoobar2000.Text = Globals.ResourceManager.GetString("foobar2000");
             this.toolStripMenuItemFoobar2000.Click += new System.EventHandler(this.PlayerSelectionCheck);
             // 
             // toolStripMenuItemVlc
             // 
             this.toolStripMenuItemVlc.Name = "toolStripMenuItemVlc";
-            this.toolStripMenuItemVlc.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemVlc.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemVlc.Text = Globals.ResourceManager.GetString("VLC");
             this.toolStripMenuItemVlc.Click += new System.EventHandler(this.PlayerSelectionCheck);
+            // 
+            // toolStripMenuItemGPMDP
+            // 
+            this.toolStripMenuItemGPMDP.Name = "toolStripMenuItemGPMDP";
+            this.toolStripMenuItemGPMDP.Size = new System.Drawing.Size(170, 22);
+            this.toolStripMenuItemGPMDP.Text = Globals.ResourceManager.GetString("GPMDP");
+            this.toolStripMenuItemGPMDP.Click += new System.EventHandler(this.PlayerSelectionCheck);
             // 
             // toolStripMenuItemQuodLibet
             // 
             this.toolStripMenuItemQuodLibet.Name = "toolStripMenuItemQuodLibet";
-            this.toolStripMenuItemQuodLibet.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemQuodLibet.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemQuodLibet.Text = Globals.ResourceManager.GetString("QuodLibet");
             this.toolStripMenuItemQuodLibet.Click += new System.EventHandler(this.PlayerSelectionCheck);
-            //
-            // toolStripMenuItemGPMDP
-            //
-            this.toolStripMenuItemGPMDP.Name = "toolStripMenuItemGPMDP";
-            this.toolStripMenuItemGPMDP.Size = new System.Drawing.Size(67, 22);
-            this.toolStripMenuItemGPMDP.Text = Globals.ResourceManager.GetString("GPMDP");
-            this.toolStripMenuItemGPMDP.Click += new System.EventHandler(this.PlayerSelectionCheck);
             // 
-            // toolStripSeparator
+            // toolStripSeparator1
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(64, 6);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // toolStripMenuItemSetFormat
             // 
             this.toolStripMenuItemSetFormat.Name = "toolStripMenuItemSetFormat";
-            this.toolStripMenuItemSetFormat.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSetFormat.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSetFormat.Text = Globals.ResourceManager.GetString("SetOutputFormat");
             this.toolStripMenuItemSetFormat.Click += new System.EventHandler(this.ToolStripMenuItemSetFormat_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(64, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(167, 6);
             // 
             // toolStripMenuItemSaveSeparateFiles
             // 
             this.toolStripMenuItemSaveSeparateFiles.Name = "toolStripMenuItemSaveSeparateFiles";
-            this.toolStripMenuItemSaveSeparateFiles.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSaveSeparateFiles.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSaveSeparateFiles.Text = Globals.ResourceManager.GetString("SaveInformationSeparately");
             this.toolStripMenuItemSaveSeparateFiles.Click += new System.EventHandler(this.ToolStripMenuItemSaveSeparateFiles_Click);
             // 
             // toolStripMenuItemSaveAlbumArtwork
             // 
             this.toolStripMenuItemSaveAlbumArtwork.Name = "toolStripMenuItemSaveAlbumArtwork";
-            this.toolStripMenuItemSaveAlbumArtwork.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSaveAlbumArtwork.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSaveAlbumArtwork.Text = Globals.ResourceManager.GetString("SaveAlbumArtwork");
             this.toolStripMenuItemSaveAlbumArtwork.Click += new System.EventHandler(this.ToolStripMenuItemSaveAlbumArtwork_Click);
             // 
@@ -227,7 +225,7 @@
             this.toolStripMenuItemMedium,
             this.toolStripMenuItemLarge});
             this.toolStripMenuItemKeepSpotifyAlbumArtwork.Name = "toolStripMenuItemKeepSpotifyAlbumArtwork";
-            this.toolStripMenuItemKeepSpotifyAlbumArtwork.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemKeepSpotifyAlbumArtwork.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemKeepSpotifyAlbumArtwork.Text = Globals.ResourceManager.GetString("KeepSpotifyAlbumArtwork");
             this.toolStripMenuItemKeepSpotifyAlbumArtwork.Click += new System.EventHandler(this.ToolStripMenuItemKeepSpotifyAlbumArtwork_Click);
             // 
@@ -257,42 +255,30 @@
             // toolStripMenuItemCacheSpotifyMetadata
             // 
             this.toolStripMenuItemCacheSpotifyMetadata.Name = "toolStripMenuItemCacheSpotifyMetadata";
-            this.toolStripMenuItemCacheSpotifyMetadata.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemCacheSpotifyMetadata.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemCacheSpotifyMetadata.Text = Globals.ResourceManager.GetString("CacheSpotifyMetadata");
             this.toolStripMenuItemCacheSpotifyMetadata.Click += new System.EventHandler(this.ToolStripMenuItemCacheSpotifyMetadata_Click);
             // 
             // toolStripMenuItemSaveHistory
             // 
             this.toolStripMenuItemSaveHistory.Name = "toolStripMenuItemSaveHistory";
-            this.toolStripMenuItemSaveHistory.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemSaveHistory.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemSaveHistory.Text = Globals.ResourceManager.GetString("SaveTrackHistory");
             this.toolStripMenuItemSaveHistory.Click += new System.EventHandler(this.ToolStripMenuItemSaveHistory_Click);
             // 
             // toolStripMenuItemDisplayTrackPopup
             // 
             this.toolStripMenuItemDisplayTrackPopup.Name = "toolStripMenuItemDisplayTrackPopup";
-            this.toolStripMenuItemDisplayTrackPopup.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemDisplayTrackPopup.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemDisplayTrackPopup.Text = Globals.ResourceManager.GetString("DisplayTrackPopup");
             this.toolStripMenuItemDisplayTrackPopup.Click += new System.EventHandler(this.ToolStripMenuItemDisplayTrackPopup_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(64, 6);
-            // 
-            // toolStripMenuItemExit
-            // 
-            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(67, 22);
-            this.toolStripMenuItemExit.Text = Globals.ResourceManager.GetString("ExitApplication");
-            this.toolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
             // 
             // toolStripMenuItemEmptyFileIfNoTrackPlaying
             // 
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Checked = true;
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Name = "toolStripMenuItemEmptyFileIfNoTrackPlaying";
-            this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Text = Globals.ResourceManager.GetString("EmptyFile");
             this.toolStripMenuItemEmptyFileIfNoTrackPlaying.Click += new System.EventHandler(this.ToolStripMenuItemEmptyFileIfNoTrackPlaying_Click);
             // 
@@ -301,18 +287,38 @@
             this.toolStripMenuItemEnableHotkeys.Checked = true;
             this.toolStripMenuItemEnableHotkeys.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItemEnableHotkeys.Name = "toolStripMenuItemEnableHotkeys";
-            this.toolStripMenuItemEnableHotkeys.Size = new System.Drawing.Size(67, 22);
+            this.toolStripMenuItemEnableHotkeys.Size = new System.Drawing.Size(170, 22);
             this.toolStripMenuItemEnableHotkeys.Text = Globals.ResourceManager.GetString("EnableHotkeys");
             this.toolStripMenuItemEnableHotkeys.Click += new System.EventHandler(this.ToolStripMenuItemEnableHotkeys_Click);
             // 
             // toolStripSeparator3
             // 
-            this.toolStripSeparator.Name = "toolStripSeparator3";
-            this.toolStripSeparator.Size = new System.Drawing.Size(64, 6);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(167, 6);
             // 
-            // timerScanTitle
+            // toolStripMenuItemStartWithWindows
             // 
-            this.timerScanMediaPlayer.Enabled = false;
+            this.toolStripMenuItemStartWithWindows.Checked = false;
+            this.toolStripMenuItemStartWithWindows.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemStartWithWindows.Name = "toolStripMenuItemStartWithWindows";
+            this.toolStripMenuItemStartWithWindows.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemStartWithWindows.Text = "Start with Windows";
+            this.toolStripMenuItemStartWithWindows.Click += new System.EventHandler(this.ToolStripMenuItemStartWithWindows_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(167, 6);
+            // 
+            // toolStripMenuItemExit
+            // 
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(170, 22);
+            this.toolStripMenuItemExit.Text = Globals.ResourceManager.GetString("ExitApplication");
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
+            // 
+            // timerScanMediaPlayer
+            // 
             this.timerScanMediaPlayer.Tick += new System.EventHandler(this.TimerScanMediaPlayer_Tick);
             // 
             // Snip
@@ -320,14 +326,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Icon = Properties.Resources.SnipIcon;
+            this.Icon = global::Winter.Properties.Resources.SnipIcon;
             this.Name = "Snip";
-            this.Text = Globals.ResourceManager.GetString("SnipForm");
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemStartWithWindows;
     }
 }

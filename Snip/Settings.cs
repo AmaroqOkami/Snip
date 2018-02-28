@@ -24,9 +24,22 @@ namespace Winter
     using System.Globalization;
     using System.Reflection;
     using Microsoft.Win32;
+    using IWshRuntimeLibrary;
 
     public static class Settings
     {
+        public static void CreateStartupShortcut()
+        {
+            string shortcutLocation = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\SnipBoot.lnk";
+            WshShell shell = new WshShell();
+            IWshShortcut shortcut = (IWshShortcut)shell.CreateShortcut(shortcutLocation);
+
+            shortcut.Description = "Boot Snip on windows start";
+            shortcut.IconLocation = Environment.CurrentDirectory + "\\Snip.exe";
+            shortcut.TargetPath = Environment.CurrentDirectory + "\\Snip.exe";
+            shortcut.Save();
+        }
+
         public static void Save()
         {
             RegistryKey registryKey = Registry.CurrentUser.CreateSubKey(
@@ -110,6 +123,15 @@ namespace Winter
             else
             {
                 registryKey.SetValue("Enable Hotkeys", "false");
+            }
+
+            if (Globals.StartWithWindows)
+            {
+                registryKey.SetValue("Start with Windows", "true");
+            }
+            else
+            {
+                registryKey.SetValue("Start with Windows", "false");
             }
 
             registryKey.Close();
@@ -210,6 +232,16 @@ namespace Winter
                     Globals.EnableHotkeys = false;
                 }
 
+                bool startWithWindowsChecked = Convert.ToBoolean(registryKey.GetValue("Start with Windows", true), CultureInfo.InvariantCulture);
+                if (startWithWindowsChecked)
+                {
+                    Globals.StartWithWindows = true;
+                }
+                else
+                {
+                    Globals.StartWithWindows = false;
+                }
+
                 Globals.TrackFormat = Convert.ToString(registryKey.GetValue("Track Format", Globals.DefaultTrackFormat), CultureInfo.CurrentCulture);
 
                 Globals.SeparatorFormat = Convert.ToString(registryKey.GetValue("Separator Format", Globals.DefaultSeparatorFormat), CultureInfo.CurrentCulture);
@@ -232,6 +264,7 @@ namespace Winter
                 Globals.DisplayTrackPopup = false;
                 Globals.EmptyFileIfNoTrackPlaying = true;
                 Globals.EnableHotkeys = true;
+                Globals.StartWithWindows = false;
                 Globals.TrackFormat = Globals.DefaultTrackFormat;
                 Globals.SeparatorFormat = Globals.DefaultSeparatorFormat;
                 Globals.ArtistFormat = Globals.DefaultArtistFormat;
